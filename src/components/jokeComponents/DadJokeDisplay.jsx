@@ -8,12 +8,9 @@ function DadJokeDisplay(props) {
     <div>
       <Card big>
         <Heading h3>Dad Joke</Heading>
-        <p style={{ height: 100 }}>{props.oneJoke}</p>
+        <p style={{ height: 100 }}>{props.dadJoke}</p>
         <Button type="submit" name="btnGetDadJoke" onClick={props.handleRandom}>
           {"Jokes"}
-        </Button>
-        <Button type="submit" name="btnGetDadJoke" onClick={props.handleRandom}>
-          {"Copy"}
         </Button>
       </Card>
     </div>

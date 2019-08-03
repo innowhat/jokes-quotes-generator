@@ -8,7 +8,7 @@ function ChuckJokeDisplay(props) {
     <div>
       <Card big>
         <Heading h3>Chuck Norris Joke</Heading>
-        <p style={{ height: 100 }}>{props.oneJoke}</p>
+        <p style={{ height: 100 }}>{props.chuckJoke}</p>
         <Button
           type="submit"
           name="btnGetChuckJoke"
