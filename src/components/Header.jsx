@@ -4,12 +4,12 @@ import Container from "../elements/Container";
 
 function Header() {
   return (
-    <Container style={{ backgroundColor: "#F5B700" }}>
-      <Heading h2 center>
+    <Container>
+      <Heading h3 center>
         <img
           src={require("../assets/vnicorn.png")}
           alt=""
-          style={{ height: 50 }}
+          style={{ height: 100 }}
         />
         <div>Vnicorn App</div>
       </Heading>

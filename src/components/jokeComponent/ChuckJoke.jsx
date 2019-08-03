@@ -3,7 +3,7 @@ import Card from "../../elements/Card";
 import Heading from "../../elements/Heading";
 import Button from "../../elements/Button";
 
-function ChuckJokeDisplay(props) {
+function ChuckJoke(props) {
   return (
     <div>
       <Card big>
@@ -21,4 +21,4 @@ function ChuckJokeDisplay(props) {
   );
 }
 
-export default ChuckJokeDisplay;
+export default ChuckJoke;

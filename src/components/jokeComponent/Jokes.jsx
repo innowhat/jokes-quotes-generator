@@ -1,8 +1,11 @@
 import React from "react";
 import Flex from "../../elements/Flex";
 import Container from "../../elements/Container";
-import ChuckJokeDisplay from "./ChuckJokeDisplay";
-import DadJokeDisplay from "./DadJokeDisplay";
+import Heading from "../../elements/Heading";
+
+import ChuckJoke from "./ChuckJoke";
+import DadJoke from "./DadJoke";
+import { StickyContainer, Sticky } from "react-sticky";
 
 class Jokes extends React.Component {
   constructor(props) {
@@ -17,7 +20,7 @@ class Jokes extends React.Component {
 
   componentDidMount() {
     this.fetchChuck();
-    this.fetchDadJoke();
+    this.fetchDad();
   }
 
   // Fetch Chucks joke from api
@@ -28,7 +31,7 @@ class Jokes extends React.Component {
   }
 
   // Fetch Dads joke from api
-  fetchDadJoke() {
+  fetchDad() {
     fetch("https://icanhazdadjoke.com/", {
       headers: { Accept: "application/json" }
     })
@@ -44,7 +47,7 @@ class Jokes extends React.Component {
   }
 
   handleDad() {
-    this.fetchDadJoke();
+    this.fetchDad();
     console.log(this.state.dadJoke);
     const getSingleJokes = this.state.dadJoke;
     this.setState({ dadJoke: getSingleJokes.joke });
@@ -62,20 +65,32 @@ class Jokes extends React.Component {
 
   render() {
     return (
-      <div>
+      <StickyContainer>
+        <Sticky>
+          {({ style }) => (
+            <Container style={{ backgroundColor: "#F5B700" }}>
+              <Heading
+                h2
+                style={{ ...style, backgroundColor: "#F5B700", padding: 20 }}
+              >
+                Jokes section
+              </Heading>
+            </Container>
+          )}
+        </Sticky>
         <Container>
           <Flex>
-            <ChuckJokeDisplay
+            <ChuckJoke
               handleRandom={this.handleRandom}
               chuckJoke={this.state.chuckJoke}
             />
-            <DadJokeDisplay
+            <DadJoke
               handleRandom={this.handleRandom}
               dadJoke={this.state.dadJoke}
             />
           </Flex>
         </Container>
-      </div>
+      </StickyContainer>
     );
   }
 }

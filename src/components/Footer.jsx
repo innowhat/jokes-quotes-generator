@@ -4,7 +4,7 @@ import Container from "../elements/Container";
 
 function Footer() {
   return (
-    <Container style={{ backgroundColor: "palevioletred" }}>
+    <Container>
       <Heading center h5>
         <img
           src={require("../assets/vnicorn.png")}
