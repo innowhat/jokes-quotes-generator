@@ -65,32 +65,21 @@ class Jokes extends React.Component {
 
   render() {
     return (
-      <StickyContainer>
-        <Sticky>
-          {({ style }) => (
-            <Container style={{ backgroundColor: "#F5B700" }}>
-              <Heading
-                h2
-                style={{ ...style, backgroundColor: "#F5B700", padding: 20 }}
-              >
-                Jokes section
-              </Heading>
-            </Container>
-          )}
-        </Sticky>
-        <Container>
-          <Flex>
-            <ChuckJoke
-              handleRandom={this.handleRandom}
-              chuckJoke={this.state.chuckJoke}
-            />
-            <DadJoke
-              handleRandom={this.handleRandom}
-              dadJoke={this.state.dadJoke}
-            />
-          </Flex>
-        </Container>
-      </StickyContainer>
+      <Container>
+        <Heading h3 center>
+          Jokes
+        </Heading>
+        <Flex style={{ border: "red" }}>
+          <ChuckJoke
+            handleRandom={this.handleRandom}
+            chuckJoke={this.state.chuckJoke}
+          />
+          <DadJoke
+            handleRandom={this.handleRandom}
+            dadJoke={this.state.dadJoke}
+          />
+        </Flex>
+      </Container>
     );
   }
 }

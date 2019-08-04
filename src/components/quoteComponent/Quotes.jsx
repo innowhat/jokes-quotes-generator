@@ -67,19 +67,10 @@ class Quotes extends React.Component {
   render() {
     return (
       <StickyContainer>
-        <Sticky>
-          {({ style }) => (
-            <Container style={{ backgroundColor: "palevioletred" }}>
-              <Heading
-                h2
-                style={{ ...style, backgroundColor: "palevioletred" }}
-              >
-                Quotes section
-              </Heading>
-            </Container>
-          )}
-        </Sticky>
         <Container>
+          <Heading h3 center>
+            Quotes
+          </Heading>
           <Flex>
             <FamousQuotes
               handleRandom={this.handleRandom}

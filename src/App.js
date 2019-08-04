@@ -12,6 +12,7 @@ function App() {
       <GlobalStyle />
       <Header />
       <Jokes />
+      <hr />
       <Quotes />
 
       <Footer />
