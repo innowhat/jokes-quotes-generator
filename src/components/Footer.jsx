@@ -4,13 +4,9 @@ import Container from "../elements/Container";
 
 function Footer() {
   return (
-    <Container style={{ background: "#ccc" }}>
-      <Heading center h5>
-        <img
-          src={require("../assets/vnicorn.png")}
-          alt=""
-          style={{ height: 20 }}
-        />
+    <Container>
+      <Heading center h5 style={{ height: 100 }}>
+        <img alt="" style={{ height: 100 }} />
         <div>Copyright @innowhat.com</div>
       </Heading>
     </Container>

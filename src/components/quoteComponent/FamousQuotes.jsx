@@ -6,33 +6,35 @@ import Button from "../../elements/Button";
 function FamousQuotes(props) {
   const tweet = `https://twitter.com/intent/tweet?text=`;
   return (
-    <div>
-      <Card big style={{ background: "palevioletred" }}>
-        <Heading h3>Famous Quotes</Heading>
-        <p style={{ minheight: 100 }}>{props.famousQuote}</p>
-        <Heading h5 right>
+    <Card primary big delay={600}>
+      <Heading h3>Famous Quotes</Heading>
+      <div style={{ minHeight: 140 }}>
+        <q>{props.famousQuote}</q>
+        <br />
+        <small style={{ color: "#ccc" }}>
           <i>{props.famousAuthor}</i>
-        </Heading>
-        <Button
-          style={{ background: "#000", border: "2px solid #fff" }}
-          type="submit"
-          name="btnGetFamousQuote"
-          onClick={props.handleRandom}
+        </small>
+      </div>
+
+      <Button
+        style={{ background: "#000", border: "2px solid #fff" }}
+        type="submit"
+        name="btnGetFamousQuote"
+        onClick={props.handleRandom}
+      >
+        {"Get quote"}
+      </Button>
+      <Button style={{ background: "#000", border: "2px solid #fff" }}>
+        <a
+          href={tweet + props.famousQuote + " -" + props.famousAuthor}
+          target="_blank"
+          rel="noopener noreferrer"
+          style={{ color: "#fff", textDecoration: "none" }}
         >
-          {"Get quote"}
-        </Button>
-        <Button style={{ background: "#000", border: "2px solid #fff" }}>
-          <a
-            href={tweet + props.famousQuote + " -" + props.famousAuthor}
-            target="_blank"
-            rel="noopener noreferrer"
-            style={{ color: "#fff", textDecoration: "none" }}
-          >
-            Tweet quote
-          </a>
-        </Button>
-      </Card>
-    </div>
+          Tweet quote
+        </a>
+      </Button>
+    </Card>
   );
 }
 

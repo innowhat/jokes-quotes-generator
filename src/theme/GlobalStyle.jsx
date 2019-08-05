@@ -7,9 +7,10 @@ const GlobalStyle = createGlobalStyle`
 
     html, body {
         margin: 0;
-        font-size: 20px;
+        font-size: 18px;
         font-family: 'Work Sans', sans-serif;
         font-weight: 300; 
+        background:#fff;
     }
 `;
 

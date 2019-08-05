@@ -1,7 +1,5 @@
 import React from "react";
 import Flex from "../../elements/Flex";
-import Container from "../../elements/Container";
-import Heading from "../../elements/Heading";
 
 import ChuckJoke from "./ChuckJoke";
 import DadJoke from "./DadJoke";
@@ -12,8 +10,12 @@ class Jokes extends React.Component {
     this.state = {
       chuckJoke:
         "MacGyver can build an airplane out of gum and paper clips. Chuck Norris can kill him and take it.",
-      dadJoke: "Something",
-      allJokes: []
+      dadJoke:
+        "The great thing about stationery shops is they're always in the same place...",
+      allJokes: [],
+      dadAuthor: "Jokes about dads",
+      chuckAuthor: "Jokes about Chuck Norris",
+      isLoading: false
     };
   }
 
@@ -24,18 +26,20 @@ class Jokes extends React.Component {
 
   // Fetch Chucks joke from api
   fetchChuck() {
+    this.setState({ isLoading: true });
     fetch(`https://api.icndb.com/jokes`)
       .then(response => response.json())
-      .then(data => this.setState({ allJokes: data.value }));
+      .then(data => this.setState({ allJokes: data.value, isLoading: false }));
   }
 
   // Fetch Dads joke from api
   fetchDad() {
+    this.setState({ isLoading: true });
     fetch("https://icanhazdadjoke.com/", {
       headers: { Accept: "application/json" }
     })
       .then(respond => respond.json())
-      .then(data => this.setState({ dadJoke: data.joke }));
+      .then(data => this.setState({ dadJoke: data.joke, isLoading: false }));
   }
 
   handleChuck() {
@@ -63,22 +67,22 @@ class Jokes extends React.Component {
 
   render() {
     return (
-      <Container>
-        <Heading h3 center>
-          Jokes
-        </Heading>
-        <Flex style={{ border: "red" }}>
+      <div>
+        <Flex>
           <ChuckJoke
             handleRandom={this.handleRandom}
             chuckJoke={this.state.chuckJoke}
+            isLoading={this.state.isLoading}
+            chuckAuthor={this.state.chuckAuthor}
           />
-
           <DadJoke
             handleRandom={this.handleRandom}
             dadJoke={this.state.dadJoke}
+            isLoading={this.state.isLoading}
+            dadAuthor={this.state.dadAuthor}
           />
         </Flex>
-      </Container>
+      </div>
     );
   }
 }

@@ -35,4 +35,13 @@ const Flex = styled.div`
   flex-direction: ${props => (props.column ? "column" : "row")};
 `;
 
+export const Column = styled.div`
+  width: ${props => {
+    if (props.three) return "33.33%";
+    if (props.four) return "25%";
+    return "50%";
+  }};
+  padding: ${props => (props.noPadding ? 0 : "15px")}};
+`;
+
 export default Flex;

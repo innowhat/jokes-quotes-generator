@@ -12,7 +12,7 @@ const primaryCss = css`
 `;
 
 const StyledCard = styled.div`
-  width: ${props => (props.big ? "450px" : "300px")};
+  width: ${props => (props.big ? "400px" : "300px")};
   padding: 15px;
   opacity: 0;
   transform: translateY(50px);

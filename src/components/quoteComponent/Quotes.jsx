@@ -1,7 +1,5 @@
 import React from "react";
 import Flex from "../../elements/Flex";
-import Container from "../../elements/Container";
-import Heading from "../../elements/Heading";
 import KanyeQuotes from "./KanyeQuotes";
 import FamousQuotes from "./FamousQuotes";
 
@@ -65,10 +63,7 @@ class Quotes extends React.Component {
 
   render() {
     return (
-      <Container>
-        <Heading h3 center>
-          Quotes
-        </Heading>
+      <div>
         <Flex>
           <FamousQuotes
             handleRandom={this.handleRandom}
@@ -81,7 +76,7 @@ class Quotes extends React.Component {
             kanyeAuthor={this.state.kanyeAuthor}
           />
         </Flex>
-      </Container>
+      </div>
     );
   }
 }
