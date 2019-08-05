@@ -25,9 +25,8 @@ This is a ReactJS based App that allows the user to generate and tweet random Qu
 ### https://favqs.com/api/qotd
 
 ## Acknowledgments
-
-### Style template - https://github.com/gisderdube/react-component-system
+Style template - https://github.com/gisderdube/react-component-system
 
 ## How to install
 
-Download > Open directory with Terminal/Command Prompt > npm install > npm start
+### Download > Open directory with Terminal/Command Prompt > npm install > npm start
