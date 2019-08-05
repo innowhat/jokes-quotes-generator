@@ -4,6 +4,7 @@ import Heading from "../../elements/Heading";
 import Button from "../../elements/Button";
 
 function DadJoke(props) {
+  const tweet = `https://twitter.com/intent/tweet?text='${props.dadJoke}`;
   return (
     <div>
       <Card big style={{ background: "#F5B700" }}>
@@ -15,15 +16,17 @@ function DadJoke(props) {
           onClick={props.handleRandom}
           style={{ background: "#000", border: "2px solid #fff" }}
         >
-          {"Jokes"}
+          {"Get joke"}
         </Button>
-        <Button
-          type="submit"
-          name="btnTweetDadJoke"
-          onClick={props.handleShare}
-          style={{ background: "#000", border: "2px solid #fff" }}
-        >
-          {"Share on Twitter"}
+        <Button style={{ background: "#000", border: "2px solid #fff" }}>
+          <a
+            href={tweet}
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{ color: "#fff", textDecoration: "none" }}
+          >
+            Tweet joke
+          </a>
         </Button>
       </Card>
     </div>

@@ -4,6 +4,8 @@ import Heading from "../../elements/Heading";
 import Button from "../../elements/Button";
 
 function KanyeQuotes(props) {
+  const tweet = `https://twitter.com/intent/tweet?text=`;
+
   return (
     <div>
       <Card big style={{ background: "palevioletred" }}>
@@ -18,16 +20,18 @@ function KanyeQuotes(props) {
           onClick={props.handleRandom}
           style={{ background: "#000", border: "2px solid #fff" }}
         >
-          {"Quote"}
+          {"Get quote"}
         </Button>
 
-        <Button
-          type="submit"
-          name="btnTweetKanyeQuote"
-          onClick={props.handleShare}
-          style={{ background: "#000", border: "2px solid #fff" }}
-        >
-          {"Share on Twitter"}
+        <Button style={{ background: "#000", border: "2px solid #fff" }}>
+          <a
+            href={tweet + props.kanyeQuote + " -" + props.kanyeAuthor}
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{ color: "#fff", textDecoration: "none" }}
+          >
+            Tweet quote
+          </a>
         </Button>
       </Card>
     </div>

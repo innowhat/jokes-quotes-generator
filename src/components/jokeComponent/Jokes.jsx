@@ -5,7 +5,6 @@ import Heading from "../../elements/Heading";
 
 import ChuckJoke from "./ChuckJoke";
 import DadJoke from "./DadJoke";
-import { StickyContainer, Sticky } from "react-sticky";
 
 class Jokes extends React.Component {
   constructor(props) {
@@ -56,7 +55,6 @@ class Jokes extends React.Component {
   // Event handler
   handleRandom = event => {
     event.preventDefault();
-
     const name = event.target.name;
     if (name === "btnGetChuckJoke") {
       this.handleChuck();
@@ -74,6 +72,7 @@ class Jokes extends React.Component {
             handleRandom={this.handleRandom}
             chuckJoke={this.state.chuckJoke}
           />
+
           <DadJoke
             handleRandom={this.handleRandom}
             dadJoke={this.state.dadJoke}

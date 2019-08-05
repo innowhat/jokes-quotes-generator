@@ -5,15 +5,14 @@ import Heading from "../../elements/Heading";
 import KanyeQuotes from "./KanyeQuotes";
 import FamousQuotes from "./FamousQuotes";
 
-import { StickyContainer, Sticky } from "react-sticky";
-
 class Quotes extends React.Component {
   constructor() {
     super();
     this.state = {
       kanyeQuote: "",
       famousQuote: "",
-      famousAuthor: ""
+      famousAuthor: "",
+      kanyeAuthor: "Kanye West"
     };
   }
 
@@ -66,24 +65,23 @@ class Quotes extends React.Component {
 
   render() {
     return (
-      <StickyContainer>
-        <Container>
-          <Heading h3 center>
-            Quotes
-          </Heading>
-          <Flex>
-            <FamousQuotes
-              handleRandom={this.handleRandom}
-              famousQuote={this.state.famousQuote}
-              famousAuthor={this.state.famousAuthor}
-            />
-            <KanyeQuotes
-              handleRandom={this.handleRandom}
-              kanyeQuote={this.state.kanyeQuote}
-            />
-          </Flex>
-        </Container>
-      </StickyContainer>
+      <Container>
+        <Heading h3 center>
+          Quotes
+        </Heading>
+        <Flex>
+          <FamousQuotes
+            handleRandom={this.handleRandom}
+            famousQuote={this.state.famousQuote}
+            famousAuthor={this.state.famousAuthor}
+          />
+          <KanyeQuotes
+            handleRandom={this.handleRandom}
+            kanyeQuote={this.state.kanyeQuote}
+            kanyeAuthor={this.state.kanyeAuthor}
+          />
+        </Flex>
+      </Container>
     );
   }
 }

@@ -4,6 +4,7 @@ import Heading from "../../elements/Heading";
 import Button from "../../elements/Button";
 
 function ChuckJoke(props) {
+  const tweet = `https://twitter.com/intent/tweet?text='${props.chuckJoke}`;
   return (
     <div>
       <Card big style={{ background: "#F5B700" }}>
@@ -15,7 +16,17 @@ function ChuckJoke(props) {
           onClick={props.handleRandom}
           style={{ background: "#000", border: "2px solid #fff" }}
         >
-          {"Jokes"}
+          {"Get joke"}
+        </Button>
+        <Button style={{ background: "#000", border: "2px solid #fff" }}>
+          <a
+            href={tweet}
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{ color: "#fff", textDecoration: "none" }}
+          >
+            Tweet joke
+          </a>
         </Button>
       </Card>
     </div>

@@ -4,6 +4,7 @@ import Heading from "../../elements/Heading";
 import Button from "../../elements/Button";
 
 function FamousQuotes(props) {
+  const tweet = `https://twitter.com/intent/tweet?text=`;
   return (
     <div>
       <Card big style={{ background: "palevioletred" }}>
@@ -18,15 +19,17 @@ function FamousQuotes(props) {
           name="btnGetFamousQuote"
           onClick={props.handleRandom}
         >
-          {"Quote"}
+          {"Get quote"}
         </Button>
-        <Button
-          type="submit"
-          name="btnTweetFamousQuote"
-          onClick={props.handleShare}
-          style={{ background: "#000", border: "2px solid #fff" }}
-        >
-          {"Share on Twitter"}
+        <Button style={{ background: "#000", border: "2px solid #fff" }}>
+          <a
+            href={tweet + props.famousQuote + " -" + props.famousAuthor}
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{ color: "#fff", textDecoration: "none" }}
+          >
+            Tweet quote
+          </a>
         </Button>
       </Card>
     </div>
