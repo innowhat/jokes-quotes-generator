@@ -9,7 +9,7 @@ function Header() {
         <img
           src={require("../assets/vnicorn.png")}
           alt=""
-          style={{ height: 50 }}
+          style={{ height: 100 }}
         />
         <div>Vnicorn Jokes and Quotes App</div>
       </Heading>

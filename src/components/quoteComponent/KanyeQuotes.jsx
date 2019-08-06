@@ -8,7 +8,7 @@ function KanyeQuotes(props) {
 
   return (
     <Card primary big delay={800}>
-      <Heading h3>Mr West's Quotes</Heading>
+      <Heading h3>Mr West's Quote</Heading>
       <div style={{ minHeight: 140 }}>
         <q>{props.kanyeQuote}</q>
         <br />

@@ -80,6 +80,8 @@ class Jokes extends React.Component {
     copied.value = copyText;
     copied.select();
     const isSuccessful = document.execCommand("copy");
+    copied.remove();
+
     if (!isSuccessful) {
       console.error("Failed to copy text.");
     }
@@ -92,6 +94,7 @@ class Jokes extends React.Component {
     copied.value = copyText;
     copied.select();
     const isSuccessful = document.execCommand("copy");
+    copied.remove();
     if (!isSuccessful) {
       console.error("Failed to copy text.");
     }

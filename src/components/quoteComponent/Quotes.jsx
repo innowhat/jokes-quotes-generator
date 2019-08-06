@@ -66,6 +66,8 @@ class Quotes extends React.Component {
     copied.select();
     console.log(copied.value);
     const isSuccessful = document.execCommand("copy");
+    copied.remove();
+
     if (!isSuccessful) {
       console.error("Failed to copy text.");
     }
@@ -79,6 +81,8 @@ class Quotes extends React.Component {
     copied.select();
     console.log(copied.value);
     const isSuccessful = document.execCommand("copy");
+    copied.remove();
+
     if (!isSuccessful) {
       console.error("Failed to copy text.");
     }

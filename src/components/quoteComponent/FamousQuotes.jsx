@@ -7,7 +7,7 @@ function FamousQuotes(props) {
   const tweet = `https://twitter.com/intent/tweet?text=`;
   return (
     <Card primary big delay={600}>
-      <Heading h3>Famous Quotes</Heading>
+      <Heading h3>Famous Quote</Heading>
       <div style={{ minHeight: 140 }}>
         <q>{props.famousQuote}</q>
         <br />
