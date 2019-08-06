@@ -1,6 +1,5 @@
 import React from "react";
 import Flex from "../../elements/Flex";
-
 import ChuckJoke from "./ChuckJoke";
 import DadJoke from "./DadJoke";
 
@@ -57,26 +56,60 @@ class Jokes extends React.Component {
   }
 
   // Event handler
-  handleRandom = event => {
+  handleClick = event => {
     event.preventDefault();
     const name = event.target.name;
     if (name === "btnGetChuckJoke") {
       this.handleChuck();
-    } else if (name === "btnGetDadJoke") this.handleDad();
+    }
+    if (name === "btnGetDadJoke") {
+      this.handleDad();
+    }
+    if (name === "btnCopyDadJoke") {
+      this.copyDad();
+    }
+    if (name === "btnCopyChuckJoke") {
+      this.copyChuck();
+    }
   };
+
+  copyChuck() {
+    let copyText = this.state.chuckJoke;
+    const copied = document.createElement("input");
+    document.body.appendChild(copied);
+    copied.value = copyText;
+    copied.select();
+    const isSuccessful = document.execCommand("copy");
+    if (!isSuccessful) {
+      console.error("Failed to copy text.");
+    }
+    console.log("COPIED", copyText);
+  }
+  copyDad() {
+    let copyText = this.state.dadJoke;
+    const copied = document.createElement("input");
+    document.body.appendChild(copied);
+    copied.value = copyText;
+    copied.select();
+    const isSuccessful = document.execCommand("copy");
+    if (!isSuccessful) {
+      console.error("Failed to copy text.");
+    }
+    console.log("COPIED", copyText);
+  }
 
   render() {
     return (
       <div>
         <Flex>
           <ChuckJoke
-            handleRandom={this.handleRandom}
+            handleClick={this.handleClick}
             chuckJoke={this.state.chuckJoke}
             isLoading={this.state.isLoading}
             chuckAuthor={this.state.chuckAuthor}
           />
           <DadJoke
-            handleRandom={this.handleRandom}
+            handleClick={this.handleClick}
             dadJoke={this.state.dadJoke}
             isLoading={this.state.isLoading}
             dadAuthor={this.state.dadAuthor}

@@ -15,7 +15,7 @@ const StyledButton = styled.button`
   outline: none;
   border: none;
   cursor: pointer;
-  margin: 15px;
+  margin: 5px;
   border: 2px solid ${props => (props.secondary ? "#F7A072" : "#a1cdf1")};
   ${props => {
     return (

@@ -20,19 +20,30 @@ function FamousQuotes(props) {
         style={{ background: "#000", border: "2px solid #fff" }}
         type="submit"
         name="btnGetFamousQuote"
-        onClick={props.handleRandom}
+        onClick={props.handleClick}
       >
         {"Get quote"}
       </Button>
-      <Button style={{ background: "#000", border: "2px solid #fff" }}>
+      <Button
+        inverse
+        name="btnTweetFamouseQuote"
+        style={{ background: "#000", border: "2px solid #fff" }}
+      >
         <a
           href={tweet + props.famousQuote + " -" + props.famousAuthor}
           target="_blank"
           rel="noopener noreferrer"
           style={{ color: "#fff", textDecoration: "none" }}
         >
-          Tweet quote
+          Tweet it
         </a>
+      </Button>
+      <Button
+        onClick={props.handleClick}
+        name="btnCopyFamouseQuote"
+        style={{ background: "#000", border: "2px solid #fff" }}
+      >
+        Copy it
       </Button>
     </Card>
   );

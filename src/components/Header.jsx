@@ -5,7 +5,7 @@ import Container from "../elements/Container";
 function Header() {
   return (
     <Container>
-      <Heading h2 center>
+      <Heading h2 center style={{ color: "#fff" }}>
         <img
           src={require("../assets/vnicorn.png")}
           alt=""

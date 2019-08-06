@@ -10,7 +10,7 @@ const GlobalStyle = createGlobalStyle`
         font-size: 18px;
         font-family: 'Work Sans', sans-serif;
         font-weight: 300; 
-        background:#fff;
+        background:#282c34;
     }
 `;
 

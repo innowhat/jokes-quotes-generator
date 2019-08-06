@@ -26,20 +26,31 @@ function ChuckJoke(props) {
       <Button
         type="submit"
         name="btnGetChuckJoke"
-        onClick={props.handleRandom}
+        onClick={props.handleClick}
         style={{ background: "#000", border: "2px solid #fff" }}
       >
         {"Get joke"}
       </Button>
-      <Button style={{ background: "#000", border: "2px solid #fff" }}>
+      <Button
+        name="btnTweetChuckJoke"
+        style={{ background: "#000", border: "2px solid #fff" }}
+      >
         <a
           href={tweet}
           target="_blank"
           rel="noopener noreferrer"
           style={{ color: "#fff", textDecoration: "none" }}
         >
-          Tweet joke
+          Tweet it
         </a>
+      </Button>
+
+      <Button
+        onClick={props.handleClick}
+        name="btnCopyChuckJoke"
+        style={{ background: "#000", border: "2px solid #fff" }}
+      >
+        Copy it
       </Button>
     </Card>
   );

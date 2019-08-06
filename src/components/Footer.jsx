@@ -5,9 +5,13 @@ import Container from "../elements/Container";
 function Footer() {
   return (
     <Container>
-      <Heading center h5 style={{ height: 100 }}>
-        <img alt="" style={{ height: 100 }} />
-        <div>Copyright @innowhat.com</div>
+      <Heading center h5 style={{ height: 100, color: "#fff" }}>
+        <a
+          href="innowhat.com"
+          style={{ color: "#fff", textDecoration: "none" }}
+        >
+          Copyright @innowhat
+        </a>
       </Heading>
     </Container>
   );

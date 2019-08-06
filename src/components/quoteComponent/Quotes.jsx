@@ -10,7 +10,8 @@ class Quotes extends React.Component {
       kanyeQuote: "",
       famousQuote: "",
       famousAuthor: "",
-      kanyeAuthor: "Kanye West"
+      kanyeAuthor: "Kanye West",
+      isLoading: false
     };
   }
 
@@ -21,19 +22,24 @@ class Quotes extends React.Component {
 
   // Fetch Kanye quote from api
   fetchKanye() {
+    this.setState({ isLoading: true });
     fetch(`https://api.kanye.rest`)
       .then(response => response.json())
-      .then(data => this.setState({ kanyeQuote: data.quote }));
+      .then(data =>
+        this.setState({ kanyeQuote: data.quote, isLoading: false })
+      );
   }
 
   // Fetch Famous quote from api
   fetchFamous() {
+    this.setState({ isLoading: true });
     fetch(`https://favqs.com/api/qotd`)
       .then(response => response.json())
       .then(data =>
         this.setState({
           famousQuote: data.quote.body,
-          famousAuthor: data.quote.author
+          famousAuthor: data.quote.author,
+          isLoading: false
         })
       );
   }
@@ -51,14 +57,52 @@ class Quotes extends React.Component {
     console.log(this.state.famousAuthor);
   }
 
+  copyFamous() {
+    let copyText = this.state.famousQuote;
+    console.log(copyText);
+    const copied = document.createElement("input");
+    document.body.appendChild(copied);
+    copied.value = copyText;
+    copied.select();
+    console.log(copied.value);
+    const isSuccessful = document.execCommand("copy");
+    if (!isSuccessful) {
+      console.error("Failed to copy text.");
+    }
+    console.log("COPIED", copyText);
+  }
+  copyKanye() {
+    let copyText = this.state.kanyeQuote;
+    const copied = document.createElement("input");
+    document.body.appendChild(copied);
+    copied.value = copyText;
+    copied.select();
+    console.log(copied.value);
+    const isSuccessful = document.execCommand("copy");
+    if (!isSuccessful) {
+      console.error("Failed to copy text.");
+    }
+    console.log("COPIED", copyText);
+  }
+
   // Event handler
-  handleRandom = event => {
+  handleClick = event => {
     event.preventDefault();
 
     const name = event.target.name;
     if (name === "btnGetKanyeQuote") {
       this.handleKanye();
-    } else if (name === "btnGetFamousQuote") this.handleFamous();
+    }
+    if (name === "btnGetFamousQuote") {
+      this.handleFamous();
+    }
+
+    if (name === "btnCopyFamouseQuote") {
+      this.copyFamous();
+    }
+    if (name === "btnCopyKanyeQuote") {
+      this.copyKanye();
+    }
   };
 
   render() {
@@ -66,14 +110,16 @@ class Quotes extends React.Component {
       <div>
         <Flex>
           <FamousQuotes
-            handleRandom={this.handleRandom}
+            handleClick={this.handleClick}
             famousQuote={this.state.famousQuote}
             famousAuthor={this.state.famousAuthor}
+            isLoading={this.state.isLoading}
           />
           <KanyeQuotes
-            handleRandom={this.handleRandom}
+            handleClick={this.handleClick}
             kanyeQuote={this.state.kanyeQuote}
             kanyeAuthor={this.state.kanyeAuthor}
+            isLoading={this.state.isLoading}
           />
         </Flex>
       </div>
