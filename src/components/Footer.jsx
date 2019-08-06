@@ -4,16 +4,21 @@ import Container from "../elements/Container";
 
 function Footer() {
   return (
-    <Container>
-      <Heading center h5 style={{ height: 100, color: "#fff" }}>
-        <a
-          href="innowhat.com"
-          style={{ color: "#fff", textDecoration: "none" }}
-        >
-          Copyright @innowhat
-        </a>
-      </Heading>
-    </Container>
+    <div>
+      <Container style={{ background: "#666" }}>
+        <Heading center h5 style={{ color: "#fff" }}>
+          <a
+            href="https://github.com/innowhat/vnicorn-jokes-quotes-generator"
+            style={{ color: "#fff" }}
+          >
+            GitHub
+          </a>
+        </Heading>
+      </Container>
+      <Container style={{ color: "#fff", textAlign: "center" }}>
+        <small>Copyright @innowhat</small>
+      </Container>
+    </div>
   );
 }
 
