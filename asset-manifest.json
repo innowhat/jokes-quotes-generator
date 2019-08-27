@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/vnicorn-jokes-quotes-generator/static/css/main.498d002a.chunk.css",
-    "main.js": "/vnicorn-jokes-quotes-generator/static/js/main.0167e1b0.chunk.js",
-    "main.js.map": "/vnicorn-jokes-quotes-generator/static/js/main.0167e1b0.chunk.js.map",
+    "main.css": "/vnicorn-jokes-quotes-generator/static/css/main.34de6062.chunk.css",
+    "main.js": "/vnicorn-jokes-quotes-generator/static/js/main.2d04a3e4.chunk.js",
+    "main.js.map": "/vnicorn-jokes-quotes-generator/static/js/main.2d04a3e4.chunk.js.map",
     "runtime~main.js": "/vnicorn-jokes-quotes-generator/static/js/runtime~main.c056305e.js",
     "runtime~main.js.map": "/vnicorn-jokes-quotes-generator/static/js/runtime~main.c056305e.js.map",
     "static/js/2.a3f1b542.chunk.js": "/vnicorn-jokes-quotes-generator/static/js/2.a3f1b542.chunk.js",
     "static/js/2.a3f1b542.chunk.js.map": "/vnicorn-jokes-quotes-generator/static/js/2.a3f1b542.chunk.js.map",
     "index.html": "/vnicorn-jokes-quotes-generator/index.html",
-    "precache-manifest.343537859bb87cb4018c2b9026077b35.js": "/vnicorn-jokes-quotes-generator/precache-manifest.343537859bb87cb4018c2b9026077b35.js",
+    "precache-manifest.68c99fc93e20ebcca222cd78805e5faa.js": "/vnicorn-jokes-quotes-generator/precache-manifest.68c99fc93e20ebcca222cd78805e5faa.js",
     "service-worker.js": "/vnicorn-jokes-quotes-generator/service-worker.js",
-    "static/css/main.498d002a.chunk.css.map": "/vnicorn-jokes-quotes-generator/static/css/main.498d002a.chunk.css.map",
+    "static/css/main.34de6062.chunk.css.map": "/vnicorn-jokes-quotes-generator/static/css/main.34de6062.chunk.css.map",
     "static/media/vnicorn.png": "/vnicorn-jokes-quotes-generator/static/media/vnicorn.14106da2.png"
   }
 }

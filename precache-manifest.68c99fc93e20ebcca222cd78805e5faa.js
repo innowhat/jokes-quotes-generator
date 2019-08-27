@@ -1,19 +1,19 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "5226096075ce86e7891b229a2e733217",
+    "revision": "4bc410e0bce76f34fb3590bdf9696cac",
     "url": "/vnicorn-jokes-quotes-generator/index.html"
   },
   {
-    "revision": "135d07dc591b784edb05",
-    "url": "/vnicorn-jokes-quotes-generator/static/css/main.498d002a.chunk.css"
+    "revision": "9ea0ab6d6c5216f5f268",
+    "url": "/vnicorn-jokes-quotes-generator/static/css/main.34de6062.chunk.css"
   },
   {
     "revision": "e903fbc14b5491d214b7",
     "url": "/vnicorn-jokes-quotes-generator/static/js/2.a3f1b542.chunk.js"
   },
   {
-    "revision": "135d07dc591b784edb05",
-    "url": "/vnicorn-jokes-quotes-generator/static/js/main.0167e1b0.chunk.js"
+    "revision": "9ea0ab6d6c5216f5f268",
+    "url": "/vnicorn-jokes-quotes-generator/static/js/main.2d04a3e4.chunk.js"
   },
   {
     "revision": "fa83c20cae4ef41ca1f1",

@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/vnicorn-jokes-quotes-generator/precache-manifest.343537859bb87cb4018c2b9026077b35.js"
+  "/vnicorn-jokes-quotes-generator/precache-manifest.68c99fc93e20ebcca222cd78805e5faa.js"
 );
 
 self.addEventListener('message', (event) => {
