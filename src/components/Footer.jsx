@@ -8,7 +8,7 @@ function Footer() {
       <Container style={{ background: "#666" }}>
         <Heading center h5 style={{ color: "#fff" }}>
           <a
-            href="https://github.com/innowhat/vnicorn-jokes-quotes-generator"
+            href="/"
             style={{ color: "#fff" }}
           >
             GitHub

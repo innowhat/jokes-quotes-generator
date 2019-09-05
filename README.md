@@ -1,13 +1,13 @@
 # Jokes and Quotes Generator
 
-![ReactJS Vnicorn Jokes Quotes Generator  ](Screenshot.png "ReactJS Jokes and Quotes Generator  ")
+![ReactJS Jokes Quotes Generator  ](Screenshot.png "ReactJS Jokes and Quotes Generator  ")
 
 ## Description
 
 This is a ReactJS based App that allows the user to generate and tweet random Quotes and Jokes, utilizing API calls.
 
 ## Demo
-https://innowhat.github.io/vnicorn-jokes-quotes-generator/
+https://innowhat.github.io/jokes-quotes-generator/
 
 ## Built With
 

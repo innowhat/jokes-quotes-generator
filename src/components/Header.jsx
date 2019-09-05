@@ -11,7 +11,7 @@ function Header() {
           alt=""
           style={{ height: 100 }}
         />
-        <div>Vnicorn Jokes and Quotes App</div>
+        <div>Jokes and Quotes App</div>
       </Heading>
     </Container>
   );

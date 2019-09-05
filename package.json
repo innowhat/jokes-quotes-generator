@@ -1,6 +1,6 @@
 {
-  "name": "vnicorn-app",
-  "homepage": "https://innowhat.github.io/vnicorn-jokes-quotes-generator",
+  "name": "jokes-quotes-generator",
+  "homepage": "https://innowhat.github.io/jokes-quotes-generator",
   "version": "0.1.1",
   "private": true,
   "dependencies": {
