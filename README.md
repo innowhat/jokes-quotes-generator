@@ -1,6 +1,6 @@
-# Vnicorn Jokes and Quotes Generator
+# Jokes and Quotes Generator
 
-![ReactJS Vnicorn Jokes Quotes Generator  ](Screenshot.png "ReactJS Vnicorn Jokes and Quotes Generator  ")
+![ReactJS Vnicorn Jokes Quotes Generator  ](Screenshot.png "ReactJS Jokes and Quotes Generator  ")
 
 ## Description
 
